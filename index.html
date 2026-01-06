@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gruffalo Song Time!</title>
+    <style>
+        body { font-family: 'Comic Sans MS', cursive; text-align: center; background-color: #f0f8ff; padding: 50px; }
+        .play-btn { 
+            background-color: #4CAF50; border: none; color: white; padding: 40px 80px;
+            text-align: center; font-size: 32px; border-radius: 50px; cursor: pointer;
+            box-shadow: 0 9px #999;
+        }
+        .play-btn:active { background-color: #3e8e41; box-shadow: 0 5px #666; transform: translateY(4px); }
+        h1 { color: #2e7d32; }
+    </style>
+</head>
+<body>
+    <h1>Tap to hear the Gruffalo Song!</h1>
+    
+    <button class="play-btn" onclick="playSong()">🎵 PLAY SONG</button>
+
+    <audio id="gruffaloAudio" src="Gruffalo song.mp3"></audio>
+
+    <script>
+        function playSong() {
+            const audio = document.getElementById('gruffaloAudio');
+            audio.play();
+            
+            // Note: This plays through the phone's current audio output.
+            // If the phone is already paired to the Bluetooth speaker, 
+            // it will come out of the speaker automatically!
+        }
+    </script>
+</body>
+</html>
